@@ -3,12 +3,18 @@ let spriteList = [];
 window.onload = () => {
 
 	spriteList.push(new Doggo());
-	setTimeout(() => tick(), 3000);
+	spriteList.push(new Title());
+
+	setTimeout(() => tickDoggo(), 3000);
+	tickTitle();
 }
 
-tick = () => {
-	for(let i =0; i<spriteList.length; ++i){
-		spriteList[i].tick();
-	}
-	window.requestAnimationFrame(tick);
+tickDoggo = () => {
+	spriteList[0].tick();
+	window.requestAnimationFrame(tickDoggo);
+}
+
+tickTitle = () =>{
+	spriteList[1].tick();
+	window.requestAnimationFrame(tickTitle);
 }

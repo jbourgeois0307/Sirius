@@ -1,6 +1,6 @@
 class Doggo {
 	constructor(){
-		this.posX = 250;
+		this.posX = 300;
 		this.posY = 500;
 		this.speed = 1.5;
 		this.velocity = 1.5;
